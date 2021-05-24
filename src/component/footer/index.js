@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../../assets/images/Union.png";
 var style = {
   backgroundColor: "#000000",
   borderTop: "1px solid #E7E7E7",
@@ -17,25 +18,47 @@ var footerNormalTextStyle = {
   bottom: "57.14%",
   fontWeight: "normal",
   fontSize: 14,
+  paddingTop: 10,
   /* identical to box height, or 171% */
 
   /* Gray 5 */
 
-  color: "#E0E0E0",
+  color: "#828282",
 };
-var footerLargeTextStyle = {
+var footerNormalKeeviSecTextStyle = {
   position: "static",
   left: "0%",
   right: "0%",
   top: "0%",
   bottom: "57.14%",
+  fontWeight: "normal",
+  fontSize: 14,
+  paddingTop: 10,
+  /* identical to box height, or 171% */
+
+  /* Gray 5 */
+
+  color: "white",
+};
+var footerLargeTextStyle = {
+  position: "static",
+  left: "0%",
+  right: "0%",
+  textAlign: "left",
+  top: "0%",
+  bottom: "57.14%",
   fontWeight: "bold",
   fontSize: 18,
+  paddingTop: 20,
   /* identical to box height, or 171% */
 
   /* Gray 5 */
 
   color: "#FFFFFF",
+};
+
+var listStyled = {
+  paddingTop: 10,
 };
 
 var phantom = {
@@ -54,34 +77,51 @@ function Footer({ children }) {
         <div className="container">
           <div className="row">
             {/* Column1 */}
-            <div className="col">
-              <h4>THICC MEMES INC</h4>
+            <div className="col" style={{ textAlign: "left", paddingTop: 20 }}>
+              <div
+                className="row"
+                style={{ paddingLeft: 10, paddingBottom: 20 }}
+              >
+                <img src={Logo} style={{ height: 33, width: 33 }} />
+                <h3
+                  style={{
+                    color: "white",
+                    paddingLeft: 6,
+                    textAlign: "center",
+                  }}
+                >
+                  KEEVI
+                </h3>
+              </div>
+
               <ui className="list-unstyled">
-                <li style={footerNormalTextStyle}>
+                <li style={footerNormalKeeviSecTextStyle}>
                   Copyright © 2021 keevi.io.
                 </li>
-                <li style={footerNormalTextStyle}>All rights reserved</li>
+                <li style={footerNormalKeeviSecTextStyle}>
+                  All rights reserved
+                </li>
               </ui>
             </div>
             {/* Column2 */}
             <div className="col" style={footerLargeTextStyle}>
               <h4>Resources</h4>
               <ui className="list-unstyled" style={footerNormalTextStyle}>
-                <li>Learn</li>
-                <li>Launch Legends</li>
-                <li>Website Builders</li>
-                <li>Community</li>
+                <li style={footerNormalTextStyle}>Learn</li>
+                <li style={footerNormalTextStyle}>Launch Legends</li>
+                <li style={footerNormalTextStyle}>Website Builders</li>
+                <li style={footerNormalTextStyle}>Community</li>
               </ui>
             </div>
             {/* Column3 */}
             <div className="col" style={footerLargeTextStyle}>
               <h4>Products</h4>
-              <ui className="list-unstyled" style={footerNormalTextStyle}>
-                <li>Video Editor</li>
-                <li>Screen Recorder</li>
-                <li>Video Cutter</li>
-                <li>Add Subtitles to Video</li>
-                <li>All Tools</li>
+              <ui className="list-unstyled">
+                <li style={footerNormalTextStyle}>Video Editor</li>
+                <li style={footerNormalTextStyle}>Screen Recorder</li>
+                <li style={footerNormalTextStyle}>Video Cutter</li>
+                <li style={footerNormalTextStyle}>Add Subtitles to Video</li>
+                <li style={footerNormalTextStyle}>All Tools</li>
               </ui>
             </div>
           </div>

@@ -11,7 +11,13 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 // paths
 const routing = (
   <Router>
-    <div style={{ height: "100vh", position: "relative" }}>
+    <div
+      style={{
+        height: "100vh",
+        position: "relative",
+        backgroundColor: "#F7F7F7",
+      }}
+    >
       <Header />
       <Switch>
         <Route exact path="" component={Home} />
